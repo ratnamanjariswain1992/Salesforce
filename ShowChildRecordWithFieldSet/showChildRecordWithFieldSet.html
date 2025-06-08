@@ -1,0 +1,20 @@
+<template>
+
+<!-- <div>
+    <lightning-button variant="brand" label="showChildRecords"  onclick={showChildRecords} class="slds-m-left_x-small"></lightning-button>
+</div>  -->
+<div class="c-container">
+    <template if:true={data}>
+        
+        <lightning-datatable
+        key-field="Id"
+        data={data}
+        columns={columns}>
+        </lightning-datatable>
+    </template>
+    <template if:false={data}>
+        <div class="slds-p-around_small">
+            <span class="slds-text-color_error">No records found</span>
+        </div>
+    </template></div>
+</template>
